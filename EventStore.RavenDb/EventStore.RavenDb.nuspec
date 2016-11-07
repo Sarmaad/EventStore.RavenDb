@@ -5,9 +5,11 @@
     <version>$version$</version>
     <title>EventStore for RavenDb</title>
     <authors>Sarmaad Amin</authors>
-    <owners>Sarmaad</owners>
+    <owners>Sarmaad Amin</owners>
+    <projectUrl>https://github.com/Sarmaad/EventStore.RavenDb</projectUrl>
+    <licenseUrl>https://github.com/Sarmaad/EventStore.RavenDb/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Document as EventStream for RavenDb</description>
+    <description>EventStore.RavenDb is a very light weight event sourcing inspired by JOliver EventStore. It uses RavenDb document as an aggregate root and it stores all events as a collection within a single document. It supports simple Sync dispatcher, implements IPipelineHook, IUpconvertEvents and IRepository from CommonDomain.</description>
     <copyright>Copyright © 2016</copyright>
     <dependencies>
       <dependency id="RavenDB.Client" version="3.5.0" />

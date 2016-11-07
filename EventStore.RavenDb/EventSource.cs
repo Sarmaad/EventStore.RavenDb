@@ -141,7 +141,7 @@ namespace EventStore.RavenDb
 
             var databaseName = DatabaseName.Invoke();
             if (!string.IsNullOrWhiteSpace(databaseName))
-                _store.DatabaseCommands.EnsureDatabaseExists(databaseName);
+                _store.DatabaseCommands.GlobalAdmin.EnsureDatabaseExists(databaseName);
 
             using (var t = new TransactionScope(TransactionScopeOption.RequiresNew))
             {
@@ -262,7 +262,7 @@ namespace EventStore.RavenDb
                 {
                     if (!_initializedDatabases.Contains(databaseName))
                     {
-                        _store.DatabaseCommands.EnsureDatabaseExists(databaseName);
+                        _store.DatabaseCommands.GlobalAdmin.EnsureDatabaseExists(databaseName);
                         new EventStreamCommits().Execute(_store.DatabaseCommands.ForDatabase(databaseName), _store.Conventions);
 
                         //TODO: register database with commit monitoring service
