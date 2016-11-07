@@ -12,10 +12,11 @@
     <dependencies>
       <dependency id="RavenDB.Client" version="3.5.0" />
     </dependencies>
+    <tags>EventStore, RavenDb, EventSourcing</tags>
   </metadata>
   <files>
     <file src="bin\$Configuration$\CommonDomain*.dll" target="lib" />
     <file src="bin\$Configuration$\EventStore.RavenDb.dll" target="lib" />
   </files>
-  <tags>EventStore, RavenDb, EventSourcing</tags>
+  
 </package>
