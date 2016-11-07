@@ -14,7 +14,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\Lib\*.dll" target="lib" />
+    <file src="bin\$Configuration$\CommonDomain*.dll" target="lib" />
+    <file src="bin\$Configuration$\EventStore.RavenDb.dll" target="lib" />
   </files>
   <tags>EventStore, RavenDb, EventSourcing</tags>
 </package>
